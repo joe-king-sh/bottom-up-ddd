@@ -1,0 +1,21 @@
+{
+  "name": "bottom-up-ddd",
+  "version": "1.0.0",
+  "description": "plaground for learning bottom-up-ddd",
+  "main": "index.ts",
+  "repository": "https://github.com/joe-king-sh/bottom-up-ddd.git",
+  "author": "joe-king-sh",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "run": "ts-node -r tsconfig-paths/register ./server/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.11",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "ts-loader": "^9.2.6"
+  }
+}
