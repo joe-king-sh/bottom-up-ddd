@@ -1,5 +1,5 @@
 import { ICircleRepository } from '@repositories/circleRepository.interface'
-import { Circle } from './circle'
+import { Circle } from '@models/circle/circle'
 
 export class CircleService {
   #circleRepository: ICircleRepository

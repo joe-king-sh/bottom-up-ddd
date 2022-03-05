@@ -1,5 +1,11 @@
 import { User } from '../user/user'
 
+type isValidOptions = {
+  id: CircleId
+  name: CircleName
+  owner: User
+  members: User[]
+}
 export class Circle {
   id: CircleId
   name: CircleName
@@ -7,10 +13,7 @@ export class Circle {
   members: User[]
 
   constructor(id: CircleId, name: CircleName, owner: User, members: User[]) {
-    if (id == null) throw Error()
-    if (name == null) throw Error()
-    if (owner == null) throw Error()
-    if (members == null) throw Error()
+    this.isValid({ id, name, owner, members })
 
     this.id = id
     this.name = name
@@ -23,6 +26,13 @@ export class Circle {
   }
   isFull() {
     return this.count() > 30
+  }
+
+  isValid({ id, name, owner, members }: isValidOptions) {
+    if (id == null) throw Error()
+    if (name == null) throw Error()
+    if (owner == null) throw Error()
+    if (members == null) throw Error()
   }
 }
 

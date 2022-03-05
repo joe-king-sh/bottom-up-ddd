@@ -71,8 +71,6 @@ export class CircleApplicationService {
   }
 
   join(command: CircleJoinCommand) {
-    console.log('join method is called')
-
     const userId = new UserId(command.userId())
     const user = this.#userRepository.find(userId)
 
@@ -93,5 +91,7 @@ export class CircleApplicationService {
     this.#circleRepository.save(circle)
   }
 
-  invite() {}
+  invite() {
+    // TODO: To be implements.
+  }
 }

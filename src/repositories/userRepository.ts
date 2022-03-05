@@ -17,7 +17,7 @@ export class UserRepository implements IUserRepository {
   save(user: User): void {
     this.#InMemoryUserArrays.push(user)
   }
-  find(id: UserId): User {
+  find(_: UserId): User {
     return this.#InMemoryUserArrays[1]
   }
 }

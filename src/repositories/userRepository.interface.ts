@@ -1,4 +1,4 @@
-import { User, UserId, UserName } from '@models/user/user'
+import { User, UserId } from '@models/user/user'
 
 export interface IUserRepository {
   save(user: User): void
