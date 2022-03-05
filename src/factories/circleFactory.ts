@@ -6,6 +6,6 @@ import { ICircleFactory } from '@factories/circleFactory.interface'
 export class CircleFactory implements ICircleFactory {
   create(name: CircleName, owner: User): Circle {
     const circleId = new CircleId(randomUUID())
-    return new Circle(circleId, name, owner, [])
+    return new Circle(circleId, name, owner, [owner])
   }
 }

@@ -1,6 +1,6 @@
 import { Circle, CircleId, CircleName } from '@models/circle/circle'
 import { User, UserId, UserName } from '@models/user/user'
-import { ICircleRepository } from './circleRepository.interface'
+import { ICircleRepository } from '@repositories/circleRepository.interface'
 
 export class CircleRepository implements ICircleRepository {
   #InMemoryCircleArrays: Circle[]
@@ -10,7 +10,7 @@ export class CircleRepository implements ICircleRepository {
   save(circle: Circle): void {
     this.#InMemoryCircleArrays.push(circle)
   }
-  findById(id: CircleId): Circle | undefined {
+  findById(_: CircleId): Circle | undefined {
     return new Circle(
       new CircleId('id'),
       new CircleName('name'),
@@ -18,8 +18,7 @@ export class CircleRepository implements ICircleRepository {
       []
     )
   }
-  findByName(name: CircleName): Circle | undefined {
+  findByName(_: CircleName): Circle | undefined {
     return undefined
-    // return this.#InMemoryCircleArrays.find((circle) => circle.name == name)
   }
 }

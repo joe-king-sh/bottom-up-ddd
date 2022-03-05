@@ -3,11 +3,15 @@ export class User {
   name: UserName
 
   constructor(id: UserId, name: UserName) {
-    if (id == null) throw Error()
-    if (name == null) throw Error()
+    this.isValid(id, name)
 
     this.id = id
     this.name = name
+  }
+
+  isValid(id: UserId, name: UserName) {
+    if (id == null) throw Error()
+    if (name == null) throw Error()
   }
 }
 
